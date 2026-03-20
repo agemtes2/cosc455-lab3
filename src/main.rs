@@ -1,4 +1,33 @@
 fn main() {
+    println!("Starting Rust examples");
+
+    // Variables
+    let number = 10;
+    println!("number = {}", number);
+
+    // If statement
+    if number > 5 {
+        println!("Greater than 5");
+    } else {
+        println!("5 or less");
+    }
+
+    // For loop
+    for i in 0..3 {
+        println!("for loop i = {}", i);
+    }
+
+    // While loop
+    let mut count = 0;
+    while count < 3 {
+        println!("while loop count = {}", count);
+        count += 1;
+    }
+
+    // Function call
+    greet("Antikot");
+
+    // Task 5 parser tests
     let test1 = "ABC123DEF".to_string();
     let test2 = "123ABC".to_string();
 
@@ -6,6 +35,10 @@ fn main() {
     assert_eq!(q1_parser(test2), false);
 
     println!("All tests passed!");
+}
+
+fn greet(name: &str) {
+    println!("Hello, {}", name);
 }
 
 fn is_uppercase_or_digit(c: char) -> bool {
